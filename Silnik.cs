@@ -1,34 +1,34 @@
 ﻿using System;
 
 namespace ConsoleApp125
-{
-    class Silnik
+{ [Serializable]
+   public class Silnik
     {
-        double Pojemnosc;
-        double IloscPaliwa;
-        private double pojemnoscZbiornikaPaliwa;
-        static double pojemnoscbaku = 40;
+        public  double pojemnosc;
+        public  double iloscPaliwa;
+        public  double pojemnoscZbiornikaPaliwa;
+       
+
+        public double Pojemnosc { get => pojemnosc; set => pojemnosc = value; }
+        public double IloscPaliwa { get => iloscPaliwa; set => iloscPaliwa = value; }
+        public double PojemnoscZbiornikaPaliwa { get => pojemnoscZbiornikaPaliwa; set => pojemnoscZbiornikaPaliwa = value; }
+
+        public Silnik(double Pojemnosc, double IloscPaliwa)
+        {
+            this.Pojemnosc = Pojemnosc;
+            this.IloscPaliwa = IloscPaliwa;
+        }
 
         public Silnik(double Pojemnosc, double IloscPaliwa, double pojemnoscbaku)
         {
             this.Pojemnosc = Pojemnosc;
             this.IloscPaliwa = IloscPaliwa;
-            pojemnoscZbiornikaPaliwa = pojemnoscbaku;
-        }
-
-        public double PojemnoscZbiornikaPaliwa
-
-        {
-            get
-
-            {
-                pojemnoscZbiornikaPaliwa = Pojemnosc;
-                return PojemnoscZbiornikaPaliwa;
-
-
-            }
+            this.pojemnoscZbiornikaPaliwa = pojemnoscbaku;
 
         }
+
+
+
 
 
         public void Nalitry(double mpg)
